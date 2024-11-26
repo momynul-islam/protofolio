@@ -1,21 +1,20 @@
 import React from 'react'
+import ServiceCard from './ServiceCard'
+import uiuxicon from '../assets/uiuxicon.png'
+import webicon from '../assets/webicon.png'
+import appicon from '../assets/appicon.png'
+import graphicicon from '../assets/graphicicon.png'
+import SectionIntro from './SectionIntro'
 
 function Services() {
   return (
     <section className='my-16 md:my-32' id='services'>
-        <div>
-            <h1 className='text-center font-bold text-3xl md:text-6xl'>Services</h1>
-            <p className='mt-4 text-center text-md'>Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus <br /> in. Aliquet donec morbi convallis pretium</p>
-        </div>
-        <div className='flex flex-wrap justify-center items-center my-8 gap-5'>
-            <button className='bg-[#F8F8F8] text-md px-4 py-2 rounded-xl cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors duration-300'>UI/UX</button>
-            <button className='bg-[#F8F8F8] text-md px-4 py-2 rounded-xl cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors duration-300'>All</button>
-            <button className='bg-[#F8F8F8] text-md px-4 py-2 rounded-xl cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors duration-300'>Web Design</button>
-            <button className='bg-[#F8F8F8] text-md px-4 py-2 rounded-xl cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors duration-300'>App Design</button>
-            <button className='bg-[#F8F8F8] text-md px-4 py-2 rounded-xl cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors duration-300'>Graphic Design</button>
-        </div>
-        <div>
-
+        <SectionIntro title='Services' description='Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium'/>
+        <div className='flex flex-col gap-5 md:flex-row mt-6'>
+            <ServiceCard icon={uiuxicon} title='UI/UX' description='Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum'/>
+            <ServiceCard icon={webicon} title='Web Design' description='Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum'/>
+            <ServiceCard icon={appicon} title='App Design' description='Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum'/>
+            <ServiceCard icon={graphicicon} title='Graphic Design' description='Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum'/>
         </div>
     </section>
   )
